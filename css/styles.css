@@ -11,10 +11,10 @@ img {
 	height: auto;
 }
 body {
-    color: white;
+    color: whitesmoke;
     font-size: 1.6rem;
     font-family: Arial, sans-serif;
-    background-size: 10px 10px;
+    /* background-size: 10px 10px; */
     background: linear-gradient(rgba(7, 11, 34, 0.9), rgba(7, 11, 34, 0.7)), 
                 url("../img/starry-sky.jpg");
     /* background-image: url("../img/starry-sky.jpg"); */
@@ -25,16 +25,17 @@ body {
     background-color: #070b22;
 }
 
-
 /* Header Styling */
 nav {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
-    background-color: rgba(219, 219, 226, 0.3);
+    background-color: rgba(236, 236, 239, 0.6);
     padding: 15px 30px;
     margin: 2em 3em;
+    color: #070b22;
+    font-weight: bold;
 }
 
 nav h1 {
@@ -64,19 +65,100 @@ nav ul li {
 
 nav ul li a {
     text-decoration: none;
-    color: whitesmoke;
+    color: #070b22;
+    font-weight: bold;
 }
 
 nav ul li a:hover {
     transition: 0.3s;
-    color: #d9980b;
+    color: #f1af21;
     text-decoration: underline;
+}
+
+/* Hero Unit*/
+.header {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 200px;
+    margin: 2em 3em;
+    text-align: center;
+    background-color: transparent;
+}
+
+header h1 {
+    color: #df9b07;
+    font-size: 5em;
+    font-weight: bold;
+    text-align: center;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    justify-content: center;
+}
+
+#button-group {
+    /* display: flex;
+    flex-wrap: wrap; */
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Default: 4 columns */
+    /* justify-content: center; */
+    /* gap: 10px; */
+    gap: 3vw 2vw;
+    padding: 20px 40px;
+}
+
+.button {
+    background-color: #d2bab0;
+    border: none;
+    color: #070b22;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    border-radius: 20px;
+    font-size: 1.3em;
+
+    width: 100%;
+    min-width: 120px;
+    display: flex;
+    justify-content: center;
 }
 
 
 
-/*-- changes header and article width on small screens --*/
-@media screen and (max-width: 768px) {
-  header {width: 96%;}
-  article {width: 96%;}
+
+@media screen and (max-width: 1120px) {
+  /* header {width: 96%;} */
+  .header  {
+        padding: 10px 40px;
+    }
+    header h1 {
+        font-size: 4em;
+    }
+}
+
+@media screen and (max-width: 684px) {
+    nav {
+        justify-content: center;
+    }
+}
+
+
+@media screen and (max-width: 640px) {
+    .header {
+        padding: 8px 10px;
+    }
+    header h1 {
+        font-size: 3.5em;
+    }
+    nav {
+        justify-content: center;
+    }
+    nav ul li {
+        margin-top: 15px;
+    }
+    #button-group {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns */
+        justify-content: center;
+    }
 }

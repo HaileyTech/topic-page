@@ -1,2 +1,75 @@
-/* add css */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html {
+	font-size: 62.5%;
+}
+img {
+	width: 100%;
+	height: auto;
+}
+body {
+    color: white;
+    font-size: 1.6rem;
+    font-family: Arial, sans-serif;
+    background-color: #070b22;
+    background-size: 10px 10px;
+}
 
+
+/* Header Styling */
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(219, 219, 226, 0.3);
+    padding: 15px 30px;
+    margin: 2em 3em;
+}
+
+nav h1 {
+    font-size: 1.5em;
+}
+
+/* Logo and Title */
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    width: 50px; 
+    height: 50px;
+    margin-right: 10px;
+}
+
+/* Navigation Menu */
+nav ul {
+    display: flex;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: whitesmoke;
+}
+
+nav ul li a:hover {
+    transition: 0.3s;
+    color: #d9980b;
+    text-decoration: underline;
+}
+
+
+
+/*-- changes header and article width on small screens --*/
+@media screen and (max-width: 768px) {
+  header {width: 96%;}
+  article {width: 96%;}
+}

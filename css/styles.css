@@ -38,6 +38,11 @@ nav h1 {
     font-size: 1.5em;
 }
 
+#description {
+    text-align: center;
+    font-size: 1.4em;
+}
+
 /* Logo and Title */
 .logo {
     display: flex;
@@ -126,6 +131,7 @@ nav ul li {
     transform: translateY(-0.5rem);
     font-weight: 800;
 }
+/* transparent width to fix resizing? */
 
 /* Different colors for each button */
 .button.mercury { --glow-color: #f3dede; } 
@@ -136,6 +142,37 @@ nav ul li {
 .button.saturn  { --glow-color: #e872ce; } 
 .button.uranus  { --glow-color: #6fcfee; } 
 .button.neptune { --glow-color: #7c2688; }
+
+
+.right {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(236, 236, 239, 0.4);
+    padding: 15px 30px;
+    margin: 2em 3em;
+    color: #070b22;
+    /* font-weight: bold; */
+}
+
+main img{
+    width: 200px; 
+    height: 200px;
+}
+
+/* .info {
+
+} */
+
+main h2 {
+    font-size: 2em;
+    font-weight: bold;
+}
+
+main button {
+    
+}
 
 
 /* Footer */
@@ -184,7 +221,6 @@ nav ul li {
     }
     nav ul li {
         margin-top: 15px;
-        margin-bottom: 5px;
     }
 }
 

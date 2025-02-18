@@ -67,8 +67,9 @@ nav ul li {
 
 .link:hover, nav ul li a:hover {
     transition: 0.3s;
-    color: #f1af21;
+    color: #df9b07;
     text-decoration: underline;
+    text-shadow: 1px 1px 5px #070b22;
 }
 
 /* Hero Unit*/
@@ -102,7 +103,7 @@ nav ul li {
 }
 
 .button {
-    font-family: 'Inter', sans-serif;
+    font-family: Inter, Poppins, Roboto, Lato, sans-serif;
     background-color: #b6b8c7;
     border: none;
     color: #070b22;

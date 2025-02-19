@@ -38,7 +38,7 @@ nav h1 {
     font-size: 1.5em;
 }
 
-#description {
+#preview {
     text-align: center;
     font-size: 1.4em;
 }
@@ -107,7 +107,7 @@ nav ul li {
     width: 120px;
 }
 
-.button {
+.hero .button {
     font-family: Inter, Poppins, Roboto, Lato, sans-serif;
     background-color: #b6b8c7;
     border: none;
@@ -126,7 +126,7 @@ nav ul li {
     transition: transform 0.3s ease, box-shadow 0.3s ease, font-weight 0.3s;
 }
 
-.button:hover {
+.hero .button:hover {
     box-shadow: 0rem 0.99rem 0.43rem -0.33rem var(--glow-color);
     transform: translateY(-0.5rem);
     font-weight: 800;
@@ -145,33 +145,65 @@ nav ul li {
 
 
 .right {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+    display: grid; 
+    grid-template-columns: 1fr 2fr; 
+    grid-gap: 10px; 
     align-items: center;
     background-color: rgba(236, 236, 239, 0.4);
-    padding: 15px 30px;
-    margin: 2em 3em;
+    padding: 20px 30px;
+    margin: 3em 6em;
     color: #070b22;
-    /* font-weight: bold; */
 }
 
 main img{
-    width: 200px; 
-    height: 200px;
+    width: 100%;
+    max-width: 400px;
+    min-width: 200px;
+    height: auto;
 }
 
-/* .info {
-
-} */
+.info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* text-align: center; */
+}
 
 main h2 {
-    font-size: 2em;
+    font-size: 2.4em;
     font-weight: bold;
+    margin-bottom: 15px;
 }
 
-main button {
-    
+main .button {
+    display: flex;
+    font-family: Inter, Poppins, Roboto, Lato, sans-serif;
+    background: #070b22;
+    color: whitesmoke;
+    font-size: 1.4em;
+    font-weight: bold;
+    border: 3px solid whitesmoke;
+    border-radius: 15px;
+    width: 15%;
+    min-width: 120px;
+    padding: 1em;
+    margin-top: 20px;
+    justify-content: center;
+}
+
+main .button:hover {
+    background: whitesmoke;
+    color: #070b22;
+    width: 20%;
+    min-width: 120px;
+    border: 3px solid #070b22;
+}
+
+.description {
+    padding-left: 3em;
+    padding-right: 3em;
+    font-size: 1.1em;
 }
 
 
@@ -215,6 +247,13 @@ main button {
     }
 }
 
+@media screen and (max-width: 850px) {
+    .description {
+        padding-left: 1em;
+        padding-right: 1em;
+    }
+}
+
 @media screen and (max-width: 684px) {
     nav {
         justify-content: center;
@@ -235,5 +274,15 @@ main button {
     #button-group {
         grid-template-columns: repeat(2, 1fr);
         justify-content: center;
+    }
+    .right {
+        grid-template-columns: 1fr; /* Single column */
+        text-align: center;
+    }
+    main img{
+        max-width: 250px;
+    }
+    .info {
+        width: 100%;
     }
 }

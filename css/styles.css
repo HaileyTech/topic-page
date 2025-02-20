@@ -60,12 +60,13 @@ nav h1 {
 .logo {
     display: flex;
     align-items: center;
+    gap: 1rem;
 }
 
 .logo img {
-    width: 50px; 
-    height: 50px;
-    margin-right: 10px;
+    height: 50px; 
+    width: auto;
+    /* margin-right: 15px; */
 }
 
 /* Navigation Menu */
@@ -75,6 +76,7 @@ nav ul {
 
 nav ul li {
     margin: 0 15px;
+    text-align: center;
 }
 
 .link, nav ul li a {
@@ -233,14 +235,6 @@ main .button:hover {
     align-items: center;
 }
 
-/* Grid Layout for Footer */
-.footer-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-/* Middle Section (Wider Box) */
 .footer-item {
     padding-right: 5px;
     padding-left: 5px;
@@ -254,18 +248,12 @@ main .button:hover {
 }
 
 @media (min-width: 1010px) { 
-    #button-group {
-        grid-template-columns: repeat(4, 1fr); /* Force exactly 4 columns */
-    }
+    #button-group { grid-template-columns: repeat(4, 1fr); }
 }
 
 @media screen and (max-width: 1120px) {
-    .hero {
-        margin: 5% 8%;
-    }
-    .hero h1 {
-        font-size: 4em;
-    }
+    .hero { margin: 5% 8%; }
+    .hero h1 { font-size: 4em; }
 }
 
 @media screen and (max-width: 850px) {
@@ -275,41 +263,52 @@ main .button:hover {
     }
 }
 
-@media screen and (max-width: 684px) {
-    nav {
-        justify-content: center;
+/* @media screen and (max-width: 640px) {
+    nav { 
+        justify-content: center; 
+        margin-left: 1em;
+        margin-right: 1em;
     }
-    nav ul li {
-        margin-top: 15px;
-    }
-    main img{
-        max-width: 300px;
-    }
+    nav ul li { margin-top: 15px; }
+    main img{ max-width: 300px; }
     .planets {
         display: flex;
-        flex-direction: column; /* Reverses the order */
+        flex-direction: column;
         text-align: center;
         margin-left: 2em;
         margin-right: 2em;
     }
-    .planets:nth-child(even) {
-        flex-direction: column-reverse; /* Reverses the order */
-    }
-}
-
+    .planets:nth-child(even) { flex-direction: column-reverse; }
+} */
 
 @media screen and (max-width: 640px) {
-    .hero h1 {
-        font-size: 3.5em;
+
+    nav { 
+        justify-content: center; 
+        margin-left: 1em;
+        margin-right: 1em;
     }
-    nav.top {
-        justify-content: center;
+    nav ul li { margin-top: 15px; }
+    main img{ max-width: 300px; }
+    .planets {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        margin-left: 2em;
+        margin-right: 2em;
     }
+    .planets:nth-child(even) { flex-direction: column-reverse; }
+
+
+
+    .hero h1 { font-size: 3.5em; }
+    /* nav.top { justify-content: center; } */
     #button-group {
         grid-template-columns: repeat(2, 1fr);
         justify-content: center;
     }
-    .info {
-        width: 100%;
+    .info { width: 100%; }
+    .footer-item {
+        margin-bottom: 10px;
     }
 }
